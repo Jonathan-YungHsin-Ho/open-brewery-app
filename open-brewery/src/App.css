@@ -13,6 +13,7 @@ body {
 }
 
 .header {
+  width: 100%;
   background-image: linear-gradient(white, white, #ffb900);
   padding: 10px 0 50px;
   display: flex;
@@ -23,10 +24,43 @@ h1 {
   margin-left: 2%;
 }
 
-input {
-  margin-right: 2%;
+select {
   border: none;
+  outline: none;
+}
+
+.search {
+  margin-right: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid black;
   padding: 5px 1%;
+  width: 60%;
+  outline: none;
+}
+
+button {
+  width: 25%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 1%;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #ffb900;
+}
+
+button:active {
+  background-color: black;
+  color: #ffb900;
 }
 
 .brewery-wrapper {
@@ -59,4 +93,24 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    width: 60%;
+    margin: 20px 0;
+  }
+
+  .search {
+    width: 70%;
+  }
+
+  input {
+    border: none;
+  }
 }

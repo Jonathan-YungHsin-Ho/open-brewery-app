@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { states } from '../states';
+
+import { getData } from '../store/actions';
 
 export default function Header() {
+  const [search, setSearch] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSelect = e => {
+    dispatch(getData(`?by_state=${e.target.value}&per_page=50`));
+    setSearch('');
+  };
+
+  const handleClick = e => {
+    e.preventDefault();
+    dispatch(getData(`/search?query=${search}&per_page=50`));
+  };
+
+  const handleKeyDown = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      dispatch(getData(`/search?query=${search}&per_page=50`));
+    }
+  };
+
   return (
     <div className='header'>
       <h1>
@@ -12,7 +37,26 @@ export default function Header() {
           🍻
         </span>
       </h1>
-      <input type='text' placeholder='...search by name' />
+      <select onChange={handleSelect}>
+        <option>Select a state...</option>
+        {states.map(state => (
+          <option
+            key={state.abbreviation}
+            value={state.name.split(' ').join('_')}>
+            {state.name}
+          </option>
+        ))}
+      </select>
+      <div className='search'>
+        <input
+          type='text'
+          placeholder='...search'
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => handleKeyDown(e)}
+        />
+        <button onClick={handleClick}>Search</button>
+      </div>
     </div>
   );
 }
