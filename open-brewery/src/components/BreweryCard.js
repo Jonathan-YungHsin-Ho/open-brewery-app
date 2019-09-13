@@ -25,7 +25,8 @@ export default function BreweryCard(props) {
           <span role='img' aria-label='telephone emoji'>
             ☎️
           </span>{' '}
-          {props.data.phone}
+          ({props.data.phone.substr(0, 3)}) {props.data.phone.substr(3, 3)}-
+          {props.data.phone.substr(6, 4)}
         </h4>
       </a>
     </div>
