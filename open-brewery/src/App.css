@@ -155,4 +155,8 @@ a {
   .search {
     width: 70%;
   }
+
+  .toggle {
+    margin-top: 20px;
+  }
 }
