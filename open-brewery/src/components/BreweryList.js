@@ -20,7 +20,7 @@ export default function BreweryList() {
       {!isFetching &&
         data.map(brewery => <BreweryCard key={data.id} data={brewery} />)}
       {data.length === 0 && !isFetching && (
-        <h3>
+        <h3 className='message'>
           <span role='img' aria-label='crying emoji'>
             😭
           </span>{' '}

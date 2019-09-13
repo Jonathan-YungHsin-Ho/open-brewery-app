@@ -12,7 +12,11 @@ function App() {
     <div className='App'>
       <Header />
 
-      {isFetching && <h3>Fetching data, thank you for your patience...</h3>}
+      {isFetching && (
+        <h3 className='message'>
+          Fetching data, thank you for your patience...
+        </h3>
+      )}
 
       <BreweryList />
     </div>

@@ -26,7 +26,6 @@ h1 {
 
 select {
   border: none;
-  outline: none;
 }
 
 .search {
@@ -39,10 +38,9 @@ select {
 
 input {
   border: none;
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   padding: 5px 1%;
   width: 60%;
-  outline: none;
 }
 
 button {
@@ -95,6 +93,11 @@ a {
   color: inherit;
 }
 
+.message {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 @media screen and (max-width: 799px) {
   .header {
     flex-direction: column;
@@ -108,9 +111,5 @@ a {
 
   .search {
     width: 70%;
-  }
-
-  input {
-    border: none;
   }
 }

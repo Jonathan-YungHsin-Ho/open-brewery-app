@@ -55,7 +55,7 @@ export default function Header() {
           onChange={e => setSearch(e.target.value)}
           onKeyDown={e => handleKeyDown(e)}
         />
-        <button onClick={handleClick}>Search</button>
+        <button onClick={handleClick}>Go!</button>
       </div>
     </div>
   );
