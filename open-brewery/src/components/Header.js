@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { useDarkMode } from '../hooks/useDarkMode';
+
 import { states } from '../states';
 
 import { getData } from '../store/actions';
@@ -8,6 +10,12 @@ import { getData } from '../store/actions';
 export default function Header() {
   const [search, setSearch] = useState('');
   const dispatch = useDispatch();
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
 
   const handleSelect = e => {
     dispatch(getData(`?by_state=${e.target.value}&per_page=50`));
@@ -57,6 +65,7 @@ export default function Header() {
         />
         <button onClick={handleClick}>Go!</button>
       </div>
+      <div onClick={toggleMode} className='toggle'></div>
     </div>
   );
 }

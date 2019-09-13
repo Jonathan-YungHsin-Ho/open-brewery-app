@@ -18,6 +18,7 @@ body {
   padding: 10px 0 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
@@ -30,7 +31,6 @@ select {
 }
 
 .search {
-  margin-right: 2%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -97,6 +97,48 @@ a {
 .message {
   padding-left: 2%;
   padding-right: 2%;
+}
+
+.toggle {
+  margin-right: 2%;
+  background-color: #160401;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #160401;
+}
+
+.dark-mode .header {
+  background-image: linear-gradient(#ebe1ce, #ebe1ce, #160401);
+}
+
+.dark-mode .brewery-card {
+  border: 1px solid #ebe1ce;
+  background-color: #270e00;
+  color: #ebe1ce;
+  box-shadow: none;
+}
+
+.dark-mode .brewery-card:hover {
+  box-shadow: 3px 3px 20px #ebe1ce;
+}
+
+.dark-mode h2 {
+  border-bottom: 1px solid #ebe1ce;
+}
+
+.dark-mode h3,
+.dark-mode h4 {
+  font-weight: normal;
+}
+
+.dark-mode .toggle {
+  background-color: #ffb900;
+  border: 2px solid black;
 }
 
 @media screen and (max-width: 799px) {
