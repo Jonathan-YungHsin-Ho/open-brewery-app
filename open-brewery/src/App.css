@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Goudy Bookletter 1911', serif;
+  background-color: #ffb900;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  background-image: linear-gradient(white, white, #ffb900);
+  padding: 10px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 2%;
+}
+
+select {
+  border: none;
+  padding: 5px 1%;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+
+input {
+  border: none;
+  /* border-bottom: 2px solid black; */
+  padding: 5px 1%;
+  width: 60%;
+}
+
+button {
+  width: 25%;
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 1%;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #ffb900;
+}
+
+button:active {
+  background-color: black;
+  color: #ffb900;
+}
+
+.brewery-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.brewery-card {
+  border: 2px solid black;
+  background-color: white;
+  margin: 10px 2%;
+  padding: 5px 1%;
+  width: 300px;
+  box-shadow: 3px 3px black;
+}
+
+.brewery-card:hover {
+  box-shadow: 3px 3px 20px black;
+}
+
+h2 {
+  border-bottom: 2px solid black;
+}
+
+.phone {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.message {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.toggle {
+  margin-right: 2%;
+  background-color: #160401;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #160401;
+}
+
+.dark-mode .header {
+  background-image: linear-gradient(#ebe1ce, #ebe1ce, #160401);
+}
+
+.dark-mode .brewery-card {
+  border: 1px solid #ebe1ce;
+  background-color: #270e00;
+  color: #ebe1ce;
+  box-shadow: none;
+}
+
+.dark-mode .brewery-card:hover {
+  box-shadow: 3px 3px 20px #ebe1ce;
+}
+
+.dark-mode h2 {
+  border-bottom: 1px solid #ebe1ce;
+}
+
+.dark-mode h3,
+.dark-mode h4 {
+  font-weight: normal;
+}
+
+.dark-mode .toggle {
+  background-color: #ffb900;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select {
+    width: 60%;
+    margin: 20px 0;
+  }
+
+  .search {
+    width: 70%;
+  }
+
+  .toggle {
+    margin-top: 20px;
+  }
+}
