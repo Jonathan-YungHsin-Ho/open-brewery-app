@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "open-brewery",
+  "builds": [
+    {
+      "src": "open-brewery/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "open-brewery/$1" }]
+}
