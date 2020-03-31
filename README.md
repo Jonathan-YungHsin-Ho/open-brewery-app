@@ -1,6 +1,6 @@
 # Find A Brewery!
 
-You can find the deployed project at [findabrewery.now.sh](https://findabrewery.now.sh/).
+You can find the deployed project at [findabrewery.netlify.com](https://findabrewery.netlify.com/).
 
 ## Project Overview
 
